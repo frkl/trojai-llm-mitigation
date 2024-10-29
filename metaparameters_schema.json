@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SRI LLM Mitigation embedding dropout baseline",
+    "technique": "",
+    "technique_description": "Find the models embedding matrix, and apply dropout to all tokens uniformly with 20% dropout rate",
+    "technique_changes": "N/A",
+    "technique_type": ["Weight Modification"],
+    "commit_id": "",
+    "repo_name": "https://github.com/usnistgov/trojai-example",
+    "required": [],
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+      "dropout": {
+          "description": "Dropout rate",
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "suggested_minimum": 0.1,
+          "suggested_maximum": 0.5
+      }
+    }
+  }
